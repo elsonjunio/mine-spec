@@ -1,6 +1,6 @@
 [project]
 name = "mine-spec"
-version = "0.1.0"
+version = "0.1.1"
 description = "Provider-agnostic storage specification contracts"
 authors = [
     {name = "Elson Silva",email = "elsonjuniog@gmail.com"}
