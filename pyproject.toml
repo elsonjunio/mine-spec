@@ -1,0 +1,25 @@
+[project]
+name = "mine-spec"
+version = "0.1.0"
+description = "Provider-agnostic storage specification contracts"
+authors = [
+    {name = "Elson Silva",email = "elsonjuniog@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+
+packages = [{ include = "mine_spec", from = "src" }]
+
+requires-python = ">=3.11"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "blue (>=0.9.1,<0.10.0)"
+]
