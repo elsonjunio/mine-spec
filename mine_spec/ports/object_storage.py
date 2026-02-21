@@ -10,7 +10,7 @@ from mine_spec.dto.object import (
 )
 
 
-class ObjectStorageDriver(ABC):
+class ObjectStorageAdapter(ABC):
     # --------------------------------------------------------
     # Lifecycle
     # --------------------------------------------------------
