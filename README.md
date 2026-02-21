@@ -67,15 +67,20 @@ Example:
 from typing import Protocol
 from mine_spec.dto.admin import CreateUserInput, UserDTO
 
-class UserAdminPort(Protocol):
-    def create_user(self, input: CreateUserInput) -> UserDTO: ...
-    def delete_user(self, username: str) -> None: ...
+class UserAdminPort(ABC):
+    @abstractmethod
+    def set_bucket_quota(self, bucket: str, quota: str) -> List[BucketQuota]:
+        pass
+
+    @abstractmethod
+    def get_bucket_quota(self, bucket: str) -> List[BucketQuota]:
+        pass
 ```
 
 Drivers implement these contracts:
 
 ```python
-class MinioAdminAdapter(UserAdminPort):
+class S3AdminAdapter(UserAdminPort):
     ...
 ```
 
