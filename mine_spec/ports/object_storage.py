@@ -145,10 +145,7 @@ class ObjectStoragePort(ABC):
         pass
 
     @abstractmethod
-    def get_bucket_versioning(
-        self,
-        name: str
-    ) -> bool:
+    def get_bucket_versioning_status(self, name: str) -> str | None:
         pass
 
     @abstractmethod
