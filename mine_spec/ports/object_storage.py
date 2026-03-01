@@ -145,6 +145,13 @@ class ObjectStoragePort(ABC):
         pass
 
     @abstractmethod
+    def get_bucket_versioning(
+        self,
+        name: str
+    ) -> bool:
+        pass
+
+    @abstractmethod
     def get_bucket_usage(self, name: str) -> BucketUsage:
         pass
 
