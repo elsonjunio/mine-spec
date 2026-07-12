@@ -8,6 +8,7 @@ from mine_spec.dto.admin import (
     GroupPolicyMapp,
     GroupPolicyDetached,
     GroupPolicyAttached,
+    UserPolicyMapp,
     BucketQuota,
     ListServiceAccounts,
     CreateServiceAccount,
@@ -149,6 +150,10 @@ class UserAdminPort(ABC):
 
     @abstractmethod
     def get_policy_from_group(self, group: str) -> List[GroupPolicyMapp]:
+        pass
+
+    @abstractmethod
+    def get_policy_from_user(self, user: str) -> List[UserPolicyMapp]:
         pass
 
     # --------------------------------------------------------

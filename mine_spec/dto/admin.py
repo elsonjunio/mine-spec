@@ -103,4 +103,21 @@ class PolicyDetached:
     policies_detached: Optional[List[str]] = None
 
 
+@dataclass
+class UserMappings:
+    user: str
+    policies: Optional[List[str]] = None
+
+
+@dataclass
+class ResultUserMappings:
+    timestamp: str
+    user_mappings: Optional[List[UserMappings]] = None
+
+
+@dataclass
+class UserPolicyMapp:
+    result: Optional[ResultUserMappings] = None
+
+
 # ---
